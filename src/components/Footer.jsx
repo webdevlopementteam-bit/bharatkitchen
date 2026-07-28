@@ -34,10 +34,10 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex flex-col">
               <span className="text-3xl font-bold tracking-wide text-white">
-                INTERIO
+                Bharat
               </span>
               <span className="text-xs tracking-[6px] uppercase text-amber-500 font-medium">
-                Design Studio
+           Kitchen
               </span>
             </Link>
 
