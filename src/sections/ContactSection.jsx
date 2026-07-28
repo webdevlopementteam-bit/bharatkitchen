@@ -2,32 +2,47 @@
 
 import { useState } from "react";
 import { Phone, Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+
+const YOUTUBE_URL =
+  "https://www.youtube.com/@bharatkitchens?app=desktop&ra=m&fbclid=PAZnRzaATVe1ZwZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpw2tGYP9mipO1NN1Y7PgNhYupDgDbEEWCMFaNeIKLb91jwql1qnuYOH8i-vX_aem_l-QeSIrA4kDV66H9zsUJog";
+const INSTAGRAM_URL = "https://www.instagram.com/bharatkitchens?utm_source=qr";
 
 const infoCards = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "+91 99999 99999",
-    href: "tel:+919999999999",
+    value: "+91 98999 13144",
+    href: "tel:+919899913144",
   },
   {
     icon: Mail,
     label: "Email Us",
-    value: "info@interiorstudio.com",
-    href: "mailto:info@interiorstudio.com",
+    value: "bharatinteriors.ind@gmail.com",
+    href: "mailto:bharatinteriors.ind@gmail.com",
   },
   {
     icon: MapPin,
-    label: "Visit Us",
-    value: "New Delhi, India",
-    href: "https://maps.google.com/?q=New+Delhi,India",
+    label: "Showroom",
+    value:
+      "A-30, 1st Floor, Mangolpuri Industrial Area, Phase 2, Delhi - 110034",
+    href: "https://maps.google.com/?q=A-30+Mangolpuri+Industrial+Area+Phase+2+Delhi+110034",
+    external: true,
+  },
+  {
+    icon: MapPin,
+    label: "Factory",
+    value:
+      "A-91 & A-30, Mangolpuri Industrial Area, Phase 2, Pitampura, Delhi - 110034",
+    href: "https://maps.google.com/?q=A-91+Mangolpuri+Industrial+Area+Phase+2+Pitampura+Delhi+110034",
+    external: true,
   },
 ];
 
 const socialLinks = [
   { icon: FaFacebookF, href: "#", label: "Facebook" },
-  { icon: FaInstagram, href: "#", label: "Instagram" },
+  { icon: FaInstagram, href: INSTAGRAM_URL, label: "Instagram", external: true },
+  { icon: FaYoutube, href: YOUTUBE_URL, label: "YouTube", external: true },
   { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
 ];
 
@@ -180,9 +195,9 @@ export default function ContactSection() {
                 <a
                   key={card.label}
                   href={card.href}
-                  target={card.icon === MapPin ? "_blank" : undefined}
-                  rel={card.icon === MapPin ? "noopener noreferrer" : undefined}
-                  className="group flex items-center gap-4 bg-white border border-neutral-200 shadow-sm px-6 py-5 hover:border-[#C89B53] transition-colors duration-300"
+                  target={card.external ? "_blank" : undefined}
+                  rel={card.external ? "noopener noreferrer" : undefined}
+                  className="group flex items-start gap-4 bg-white border border-neutral-200 shadow-sm px-6 py-5 hover:border-[#C89B53] transition-colors duration-300"
                 >
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#C89B53]/10 border border-[#C89B53]/30 text-[#C89B53]">
                     <Icon size={20} />
@@ -192,7 +207,7 @@ export default function ContactSection() {
                     <div className="text-sm text-neutral-500">
                       {card.label}
                     </div>
-                    <div className="font-semibold text-neutral-900">
+                    <div className="font-semibold text-neutral-900 leading-snug">
                       {card.value}
                     </div>
                   </div>
@@ -213,6 +228,8 @@ export default function ContactSection() {
                     <a
                       key={social.label}
                       href={social.href}
+                      target={social.external ? "_blank" : undefined}
+                      rel={social.external ? "noopener noreferrer" : undefined}
                       aria-label={social.label}
                       className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200 text-neutral-700 hover:bg-[#C89B53] hover:border-[#C89B53] hover:text-white transition-all duration-300"
                     >
@@ -230,7 +247,7 @@ export default function ContactSection() {
         <div className="mt-10 h-[350px] md:h-[420px] w-full overflow-hidden border border-neutral-200 shadow-sm">
           <iframe
             title="Bharat Kitchen Location"
-            src="https://www.google.com/maps?q=New+Delhi,India&output=embed"
+            src="https://www.google.com/maps?q=Mangolpuri+Industrial+Area+Phase+2+Delhi+110034&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}

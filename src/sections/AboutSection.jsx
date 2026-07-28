@@ -90,10 +90,7 @@ export default function AboutSection() {
             {/* Paragraph */}
 
             <p className="mt-8 text-lg leading-9 text-neutral-600">
-              At <strong>Bharat Kitchen</strong>, we create beautifully crafted
-              modular kitchens, elegant TV units, stylish wardrobes and custom
-              interior solutions that perfectly combine luxury, functionality
-              and modern aesthetics.
+             With 10 years of experience in the furniture manufacturing industry, we take pride in designing and crafting premium-quality Modular Kitchens, TV Units, and Wardrobes* that combine style, functionality, and durability.
             </p>
 
             <p className="mt-6 text-lg leading-9 text-neutral-600">

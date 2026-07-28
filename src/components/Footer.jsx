@@ -1,21 +1,25 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+
+const YOUTUBE_URL =
+  "https://www.youtube.com/@bharatkitchens?app=desktop&ra=m&fbclid=PAZnRzaATVe1ZwZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpw2tGYP9mipO1NN1Y7PgNhYupDgDbEEWCMFaNeIKLb91jwql1qnuYOH8i-vX_aem_l-QeSIrA4kDV66H9zsUJog";
+const INSTAGRAM_URL = "https://www.instagram.com/bharatkitchens?utm_source=qr";
 
 const quickLinks = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Projects", href: "/projects" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Contact", href: "/contact" },
+  { name: "About", href: "#" },
+  { name: "Services", href: "#" },
+  { name: "Projects", href: "#" },
+  { name: "Gallery", href: "#" },
+  { name: "Contact", href: "#" },
 ];
 
 const services = [
-  { name: "Modular Kitchen", href: "/services" },
-  { name: "Wardrobes", href: "/services" },
-  { name: "TV Units", href: "/services" },
-  { name: "Interior Consultation", href: "/services" },
+  { name: "Modular Kitchen", href: "#" },
+  { name: "Wardrobes", href: "#" },
+  { name: "TV Units", href: "#" },
+  { name: "Interior Consultation", href: "#" },
 ];
 
 export default function Footer() {
@@ -52,10 +56,21 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:bg-amber-500 hover:border-amber-500 hover:text-white transition-all duration-300"
               >
                 <FaInstagram size={15} />
+              </a>
+
+              <a
+                href={YOUTUBE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:bg-amber-500 hover:border-amber-500 hover:text-white transition-all duration-300"
+              >
+                <FaYoutube size={15} />
               </a>
 
               <a
@@ -127,27 +142,44 @@ export default function Footer() {
             <ul className="flex flex-col gap-5">
               <li>
                 <a
-                  href="tel:+919999999999"
+                  href="tel:+919899913144"
                   className="flex items-start gap-3 hover:text-amber-500 transition duration-300"
                 >
                   <Phone size={18} className="mt-1 shrink-0" />
-                  <span>+91 99999 99999</span>
+                  <span>+91 98999 13144</span>
                 </a>
               </li>
 
               <li>
                 <a
-                  href="mailto:info@interiorstudio.com"
+                  href="mailto:bharatinteriors.ind@gmail.com"
                   className="flex items-start gap-3 hover:text-amber-500 transition duration-300"
                 >
                   <Mail size={18} className="mt-1 shrink-0" />
-                  <span>info@interiorstudio.com</span>
+                  <span>bharatinteriors.ind@gmail.com</span>
                 </a>
               </li>
 
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="mt-1 shrink-0" />
-                <span>New Delhi, India</span>
+                <span>
+                  <strong className="block text-white font-medium">
+                    Showroom
+                  </strong>
+                  A-30, 1st Floor, Mangolpuri Industrial Area, Phase 2,
+                  Delhi - 110034
+                </span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <MapPin size={18} className="mt-1 shrink-0" />
+                <span>
+                  <strong className="block text-white font-medium">
+                    Factory
+                  </strong>
+                  A-91 &amp; A-30, Mangolpuri Industrial Area, Phase 2,
+                  Pitampura, Delhi - 110034
+                </span>
               </li>
             </ul>
           </div>

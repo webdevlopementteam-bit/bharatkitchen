@@ -15,7 +15,12 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
+  FaYoutube,
 } from "react-icons/fa";
+
+const YOUTUBE_URL =
+  "https://www.youtube.com/@bharatkitchens?app=desktop&ra=m&fbclid=PAZnRzaATVe1ZwZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpw2tGYP9mipO1NN1Y7PgNhYupDgDbEEWCMFaNeIKLb91jwql1qnuYOH8i-vX_aem_l-QeSIrA4kDV66H9zsUJog";
+const INSTAGRAM_URL = "https://www.instagram.com/bharatkitchens?utm_source=qr";
 
 const navLinks = [
   {
@@ -69,24 +74,24 @@ export default function Header() {
             <div className="flex items-center gap-8">
 
               <a
-                href="tel:+919999999999"
+                href="tel:+919899913144"
                 className="flex items-center gap-2 text-sm hover:text-amber-400 transition"
               >
                 <Phone size={15} />
-                <span>+91 99999 99999</span>
+                <span>+91 98999 13144</span>
               </a>
 
               <a
-                href="mailto:info@interiorstudio.com"
+                href="mailto:bharatinteriors.ind@gmail.com"
                 className="flex items-center gap-2 text-sm hover:text-amber-400 transition"
               >
                 <Mail size={15} />
-                <span>info@interiorstudio.com</span>
+                <span>bharatinteriors.ind@gmail.com</span>
               </a>
 
               <div className="flex items-center gap-2 text-sm">
                 <MapPin size={15} />
-                <span>New Delhi, India</span>
+                <span>Mangolpuri, Delhi</span>
               </div>
 
             </div>
@@ -103,10 +108,21 @@ export default function Header() {
               </a>
 
               <a
-                href="#"
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:bg-amber-500 hover:border-amber-500 hover:text-white transition-all duration-300"
               >
                 <FaInstagram size={15} />
+              </a>
+
+              <a
+                href={YOUTUBE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:bg-amber-500 hover:border-amber-500 hover:text-white transition-all duration-300"
+              >
+                <FaYoutube size={15} />
               </a>
 
               <a
@@ -140,13 +156,7 @@ export default function Header() {
 
             <Link href="/" className="flex flex-col">
 
-              <span className="text-3xl font-bold tracking-wide text-neutral-900">
-                INTERIO
-              </span>
-
-              <span className="text-xs tracking-[6px] uppercase text-amber-600 font-medium">
-                Design Studio
-              </span>
+           <img src="/logo.png" className="h-20 w-full"></img>
 
             </Link>
 
@@ -235,24 +245,24 @@ export default function Header() {
               <div className="mt-8 space-y-4 border-t pt-6">
 
                 <a
-                  href="tel:+919999999999"
+                  href="tel:+919899913144"
                   className="flex items-center gap-3 text-neutral-700"
                 >
                   <Phone size={18} />
-                  +91 99999 99999
+                  +91 98999 13144
                 </a>
 
                 <a
-                  href="mailto:info@interiorstudio.com"
+                  href="mailto:bharatinteriors.ind@gmail.com"
                   className="flex items-center gap-3 text-neutral-700"
                 >
                   <Mail size={18} />
-                  info@interiorstudio.com
+                  bharatinteriors.ind@gmail.com
                 </a>
 
                 <div className="flex items-center gap-3 text-neutral-700">
                   <MapPin size={18} />
-                  New Delhi, India
+                  Mangolpuri, Delhi
                 </div>
 
               </div>
@@ -269,10 +279,21 @@ export default function Header() {
                 </a>
 
                 <a
-                  href="#"
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-neutral-900 text-white flex items-center justify-center hover:bg-amber-500 transition"
                 >
                   <FaInstagram size={16} />
+                </a>
+
+                <a
+                  href={YOUTUBE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-neutral-900 text-white flex items-center justify-center hover:bg-amber-500 transition"
+                >
+                  <FaYoutube size={16} />
                 </a>
 
                 <a
