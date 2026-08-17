@@ -125,7 +125,7 @@ export default function AboutSection() {
             <div className="mt-12">
 
               <Link
-                href="/about"
+                href="#services"
                 className="inline-flex items-center bg-[#1D1D1D] text-white px-9 py-4 uppercase tracking-[2px] font-semibold hover:bg-[#C89B53] transition duration-300"
               >
                 Discover More

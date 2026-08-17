@@ -41,16 +41,6 @@ export default function WorkProcess() {
   return (
     <section className="relative overflow-hidden bg-[#F8F3EB] pb-20">
 
-      {/* Background Decoration */}
-
-      <div className="absolute right-0 top-0 opacity-5">
-        <img
-          src="/blueprint.png"
-          alt=""
-          className="w-[500px]"
-        />
-      </div>
-
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
